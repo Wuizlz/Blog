@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wuzilz Blog</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="/hamburger.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <div class="logo">BlogItOut</div>
+      </div>
+      <div class="nav-right">
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <div class="SWE-title">
+        <h1>Future SWE??</h1>
+      </div>
+      <div class="comp-IMG">
+        <img src="/images/swe_example.jpeg" />
+      </div>
+      <div class="SWE-text">
+        <p>
+          Hello, fellow tech enthusiasts! My journey into the world of software
+          engineering began in high school when I discovered the thrill of
+          coding. Overcoming challenges in learning data structures and
+          algorithms taught me the value of persistence and practice. The
+          support from the developer community and resources like Stack Overflow
+          and GitHub has been invaluable. Developing a web application using
+          HTML, CSS, and JavaScript gave me practical experience and reinforced
+          my passion for front-end development. Staying updated with the latest
+          technologies, I am currently exploring React.js and Node.js to expand
+          my skillset. I aspire to secure an internship where I can work on
+          impactful projects and learn from experienced professionals. My
+          ultimate goal is to become a full-stack developer, contributing to
+          innovative solutions that make a difference in people's lives. The
+          path to becoming a software engineer is challenging but immensely
+          rewarding, and I am excited about the endless possibilities ahead.
+        </p>
+      </div>
+      <div class="textBOX">
+        <form action="/submit" method="POST">
+          <input
+            type="text"
+            id="textBox"
+            name="textBox"
+            placeholder="Share you're thoughts!"
+            required
+          />
+          <button type="submit" Submit>Submit</button>
+        </form>
+      </div>
+      <div class="comments-section">
+        <h2>Comments</h2>
+        <ul>
+            <% if (comments.length > 0) { %>
+                <% comments.forEach(comment => { %>
+                    <li><%= comment %></li>
+                <% }); %>
+            <% }else{ %>
+                <li style="list-style: none;"> No comments yet. Be the first to share your thoughs!</li>
+            <% } %>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
