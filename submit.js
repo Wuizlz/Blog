@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.render("index", { comments: comments });
 });
 
+app.get("/create-blog", (req,res)=>
+{
+  res.render("create-blog");
+})
+
 app.post("/submit", (req, res) => {
   const textBoxValue = req.body.textBox;
   if (textBoxValue) {
